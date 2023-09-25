@@ -2,7 +2,6 @@ import numpy as np
 
 class SudokuPrinter:
 
-    # @staticmethod
     def __init__(self):
         self.numFilas = list()
 
