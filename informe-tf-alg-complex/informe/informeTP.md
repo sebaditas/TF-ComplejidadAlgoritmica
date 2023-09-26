@@ -382,6 +382,12 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 
           <p align = "center";><img src="resultado3.png" alt="UPC"></img></p>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ## 6. Conclusiones
 
 + Resolver un Sudoku de 16x16 es significativamente más complejo que resolver un Sudoku estándar de 9x9. El aumento en el tamaño del tablero aumenta exponencialmente la cantidad de combinaciones posibles y, por lo tanto, la dificultad del problema.
@@ -406,6 +412,11 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 
 + Para garantizar la calidad de tu algoritmo, debemos seguir realizando pruebas exhaustivas con una variedad de Sudokus de diferentes tamaños y niveles de dificultad. Esto te ayudará a identificar posibles fallos y a optimizar el rendimiento.
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## 7. Bibliografía
 
