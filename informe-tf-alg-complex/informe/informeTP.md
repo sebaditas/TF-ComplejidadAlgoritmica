@@ -262,13 +262,13 @@ También puedes conectar las celdas que están en la misma fila, columna y bloqu
 
 <div style="text-align: justify;">
 
-Estructuras utilizadas:
+**Estructuras utilizadas**:
 
 + Matriz para representar el tablero del sudoku
 
 + Grafo para representar la matriz
 
-Algoritmos utilizados:
+**Algoritmos utilizados**:
 
 + Backtracking para hallar las posible soluciones del sudoku avanzando y retrocediendo
 + Divide y vencerás para separar las funcionalidades del programa
