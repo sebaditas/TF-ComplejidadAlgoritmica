@@ -72,17 +72,11 @@
   2.3. [Estado final](#23-estado-final)<br>
   2.4. [Transiciones](#24-transiciones)<br>
   2.5. [Representación](#25-representación)<br>
-  2.6. [Representación mediante grafos](#22-representación-mediante-grafos)<br>
+  2.6. [Representación mediante grafos](#26-representación-mediante-grafos)<br>
+  2.7. [Cálculos de tamaño](#27-cálculos-de-tamaño)<br>
+  2.8. [Visualización](#28-visualización)<br>
+  2.8.1. [Gráfico de una porción representativa del espacio de búsqueda](#281-gráfico-de-una-porción-representativa-del-espacio-de-búsqueda)<br>
   3. [Propuesta](#3-propuesta)<br>
-  4. [Diseño de la aplicación](#4-diseño-de-la-aplicación)<br>
-     4.1. [Análisis de requerimientos](#41-análisis-de-requerimientos)<br>
-     4.2. [Especificación](#42-especificación)<br>
-     4.3. [Diseño y arquitectura](#43-diseño-y-arquitectura)<br>
-     4.4. [Programación](#44-programación)<br>
-     4.5. [Análisis de complejidad](#45-análisis-de-complejidad)<br>
-  5. [Validación de resultados y pruebas](#5-validación-de-resultados-y-pruebas)<br>
-  6. [Conclusiones](#6-conclusiones)<br>
-  7. [Bibliografía](#7-bibliografía)
 
 </div>
 
@@ -176,9 +170,10 @@ En este caso, como haremos un bot para sudoku no haremos visualización del conj
 + Representación
     + Atributos
     + Tipos de datos
++ Representación mediante grafos
 + Cálculos del tamaño
+
 + Visualización
-   + Estadísticas
    + Gráfico de una porción representativa del espacio de búsqueda
 
 ### 2.1. Espacio de búsqueda
@@ -252,7 +247,7 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
   **imprimirNumFilas** crea estructuras temporales (final, str_fin, borde) para imprimir visualmente el Sudoku en la interfaz gráfica utilizando PyAutoGUI.
 
 <p align="center";>
-  <img src="Imagen4.png" alt="divideyvenceras">
+  <img src="clase.png" alt="divideyvenceras">
 </p>
 
 ### 2.6. Representación mediante grafos
@@ -273,6 +268,47 @@ También puedes conectar las celdas que están en la misma fila, columna y bloqu
 
 <p align="center";>
   <img src="grafosudoku.jpg" alt="UPC">
+</p>
+
+### 2.7. Cálculos de tamaño
+
+En un Sudoku 9x9, cada celda puede contener un número del 1 al 9 (inclusive) o puede estar vacía. Así, en una celda, hay 9 posibles opciones de número más la opción de estar vacía, lo que da un total de 10 posibles estados para cada celda.
+
+Dado que un Sudoku 9x9 tiene 81 celdas (9 filas x 9 columnas), podemos calcular el tamaño del espacio de búsqueda multiplicando las posibilidades en cada celda:
+
+10<sup>81</sup>
+ 
+Esto es igual a 10<sup>81</sup> o 1 seguido de 81 ceros, lo que es una cantidad astronómicamente grande. Es importante destacar que la mayoría de estas configuraciones no son soluciones válidas, ya que no cumplen con las reglas del Sudoku (no contienen números únicos en cada fila, columna y subgrilla de 3x3).
+
+El resolver un Sudoku implica reducir este espacio de búsqueda, utilizando reglas y lógica para eliminar configuraciones inválidas y encontrar la solución correcta. Las técnicas de resolución buscan simplificar y acotar este espacio de búsqueda de manera eficiente para llegar a la solución correcta.
+
+### 2.8. Visualización
+
+Antes de pasar con el gráfico, es bueno explicar cómo es que podríamos llegar a calcular el espacio de búsqueda.
+
+La fórmula para calcular el espacio de búsqueda en un Sudoku de tamaño n x n , donde cada celda puede contener números del 1 al n, se puede expresar como:
+
+E = (n!)<sup>n<sup>2</sup></sup>
+
+donde:
+
++ E es el tamaño del espacio de búsqueda.
++ n es el tamaño de cada lado del Sudoku (por ejemplo, n = 9 para un Sudoku 9x9).
++ n<sup>2</sup> es el número total de celdas en el Sudoku.
++ n! es el factorial de n, que representa el número de formas en que puedes organizar los números del 1 al n en una fila o columna sin repetir ninguno.
+  
++ La fórmula se deriva de la multiplicación del número de permutaciones posibles para llenar cada fila y columna (que es n!) elevado a la potencia del total de celdas (n<sup>2</sup>).
+
+#### 2.8.1. **Gráfico de una porción representativa del espacio de búsqueda**
+
+A continuación mostraremos un gráfico mínimo, el cual, representa el espacio de búsqueda mínimo que requiere nuestro sudoku.
+
+<p align="center";>
+  <img src="espacio1.png" alt="UPC">
+</p>
+
+<p align="center";>
+  <img src="espacio2.png" alt="UPC">
 </p>
 
 </div>
@@ -298,6 +334,7 @@ También puedes conectar las celdas que están en la misma fila, columna y bloqu
 + Además, implementaremos algunas optimizaciones. Utilizaremos técnicas de propagación para eliminar números inválidos en las celdas restantes, lo que reducirá la cantidad de backtracking necesario. Elegiremos las celdas vacías de manera inteligente, comenzando por las celdas con menos opciones válidas. También consideraremos el uso de algoritmos de búsqueda heurística como el algoritmo DLX (Dancing Links) para resolver Sudokus de manera eficiente.
 
 + Finalmente aseguraremos de probar nuestro programa con varios Sudokus 16x16 para verificar su eficiencia y corrección.
+
 
 </div>
 
