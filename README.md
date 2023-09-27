@@ -253,21 +253,7 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
 
   **verificacion**, **verificar_fila**, **verificar_columna** y **verificar_subcuadricula** utilizan la matriz NumFilas, además del divide y vencerás para separar la función en métodos más pequeños,   para verificar si colocar un número en una celda es válido de acuerdo con las reglas del Sudoku.
 
-  **resultado** utiliza la matriz NumFilas para buscar soluciones recursivamente y llenar las celdas vacías del Sudoku.
-
-  **imprimirNumFilas** crea estructuras temporales (final, str_fin, borde) para imprimir visualmente el Sudoku en la interfaz gráfica utilizando PyAutoGUI.
-
 ```python
-
-	#Clase SudokuSolver
-	import pyautogui as pg
-	import time
-	
-	class SudokuSolver:
-	
-	def __init__(self):
-	  self.NumFilas = list()
-	
 	def verificacion(self, x, y, n):
 	  return (
 	      self.verificar_fila(x, y, n) and
@@ -297,7 +283,13 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
 		  if self.NumFilas[i][j] == n:
 		      return False
 	  return True
-	
+
+```
+
+  **resultado** utiliza la matriz NumFilas para buscar soluciones recursivamente y llenar las celdas vacías del Sudoku.
+
+```python
+
 	def resultado(self):
 	  for y in range(9):
 	      for x in range(9):
@@ -310,6 +302,12 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
 		      return
 	  self.imprimirNumFilas()
 	  input("Seguimos?")
+
+```
+
+  **imprimirNumFilas** crea estructuras temporales (final, str_fin, borde) para imprimir visualmente el Sudoku en la interfaz gráfica utilizando PyAutoGUI.
+
+```python
 	
 	def imprimirNumFilas(self):
 	  final = list()
