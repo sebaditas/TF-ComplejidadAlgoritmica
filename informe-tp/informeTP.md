@@ -284,7 +284,7 @@ El resolver un Sudoku implica reducir este espacio de búsqueda, utilizando regl
 
 Antes de pasar con el gráfico, es bueno explicar cómo es que podríamos llegar a calcular el espacio de búsqueda.
 
-La fórmula para calcular el espacio de búsqueda en un Sudoku de tamaño n x n , donde cada celda puede contener números del 1 al n, se puede expresar como:
+La fórmula para calcular el espacio de búsqueda en un Sudoku de tamaño n x n, donde cada celda puede contener números del 1 al n, se puede expresar como:
 
 E = (n!)<sup>n<sup>2</sup></sup>
 
