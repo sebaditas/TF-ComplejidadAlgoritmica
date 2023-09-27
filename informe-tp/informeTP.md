@@ -67,7 +67,7 @@
   1.2.1. [Algoritmo de Backtracking](#121-algoritmo-de-backtracking)<br>
   1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
   2. [Descripción y visualización del conjunto de datos](#2-descripción-y-visualización-del-conjunto-de-datos)<br>
-  2.1. [Descripción del conjunto de datos](#21-descripción-del-conjunto-de-datos)<br>
+  2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
   2.2. [Representación mediante grafos](#22-representación-mediante-grafos)<br>
   3. [Propuesta](#3-propuesta)<br>
   4. [Diseño de la aplicación](#4-diseño-de-la-aplicación)<br>
@@ -163,13 +163,24 @@ Esta técnica es valiosa porque puede ayudar a reducir la complejidad de tiempo 
 
 ## 2. Descripción y visualización del conjunto de datos
 
-Los datos se han sacado desde páginas web, donde el sudoku creado, genera muchas posibilidades con lo cual nuestro bot busca la solución al problema tomando las delimitaciones correspondientes de una matriz 9 x 9.
-Al evaluar la matriz, el algoritmo tiene que ir de izquierda a derecha hasta llegar a 8 (0 a 8), al llegar a 8, regresa 9 pasos a la izquierda y baja un solo paso, para seguir con esa secuencia y así terminar con el proceso.
+En este caso, como haremos un bot para sudoku no haremos visualización del conjunto de datos. En su lugar, describiremos detalladamente lo siguiente:
 
-### 2.1. Descripción del conjunto de datos
++ Espacio de búsqueda
++ Estado inicial
++ Transiciones
++ Estado Final
++ Representación
+    + Atributos
+    + Tipos de datos
++ Cálculos del tamaño
++ Visualización
+   + Estadísticas
+   + Gráfico de una porción representativa del espacio de búsqueda
 
-Los datos generados, se generan en la función resultado(), el cual analiza la matriz entrante y de acuerdo a eso, llama a las validaciones para ver si se puede generar esa solucion y así hasta que encuentre.
-Resaltar que, al ser una matriz de 9 x 9, las soluciones pueden ser pocas al ser del 1 al 9 y solo comparando números en vertical y horizontal.
+### 2.1. Espacio de bússqueda
+
+El espacio de búsqueda en un Sudoku 9x9 se refiere a la colección de posibles configuraciones y soluciones que se pueden alcanzar al intentar resolver el rompecabezas. En un Sudoku 9x9, tienes una cuadrícula de 9 filas y 9 columnas, que se divide en nueve subgrillas más pequeñas de 3x3.
+Para describir el espacio de búsqueda en un Sudoku 9x9, consideremos que cada celda puede contener un número del 1 al 9, representando un posible candidato para esa posición. Por lo tanto, en la primera celda, por ejemplo, tienes 9 posibles opciones (números del 1 al 9), en la segunda también 9 opciones, y así sucesivamente. Para la segunda celda, debes tener en cuenta la restricción de que no se puede repetir ningún número en la misma fila, columna o subgrilla.
 
 + Datos guardados:
 
