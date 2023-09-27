@@ -230,8 +230,29 @@ Si una suposición lleva a una contradicción o a un Sudoku no válido, se retro
 
 La representación es que tipos de estructuras de datos hemos utilizado para la elaboración del bot de sudoku de 9 x 9. A continuación, mostraremos las estructuras de datos que hemos usado y que estamos evaluando para el producto final.
 
++ Matriz bidimensional **NumFilas**:
+Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 9. Un 0 indica una celda vacía que debe llenarse durante la resolución.
+
+En la función resultado, se realiza un recorrido por la matriz bidimensional NumFilas utilizando bucles for anidados para explorar y llenar las celdas vacías con números que cumplen las reglas del Sudoku.
+
+El algoritmo de backtracking intenta colocar números en las celdas vacías, verificando si es posible según las reglas del Sudoku. Si se encuentra una contradicción, se retrocede y se prueba con otro número hasta encontrar una solución válida.
+
 <p align="center";>
-  <img src="entrada.png" alt="divideyvenceras">
+  <img src="Imagen4.png" alt="divideyvenceras">
+</p>
+
++ Además de la matriz NumFilas, también se utilizan listas temporales y strings para manipular y presentar la información en la interfaz gráfica usando PyAutoGUI.
+
+Las funciones y su relación con estas estructuras de datos son las siguientes:
+
+verificacion, verificar_fila, verificar_columna y verificar_subcuadricula utilizan la matriz NumFilas para verificar si colocar un número en una celda es válido de acuerdo con las reglas del Sudoku.
+
+resultado utiliza la matriz NumFilas para buscar soluciones recursivamente y llenar las celdas vacías del Sudoku.
+
+imprimirNumFilas crea estructuras temporales (final, str_fin, borde) para imprimir visualmente el Sudoku en la interfaz gráfica utilizando PyAutoGUI.
+
+<p align="center";>
+  <img src="Imagen4.png" alt="divideyvenceras">
 </p>
 
 ### 2.6. Representación mediante grafos
