@@ -1,6 +1,8 @@
 # TF-ComplejidadAlgoritmica
-Avances TF
-
-El codigo funciona pero solo en una matriz 9 x 9. Debe ingresar a una pagina de sudoku de 9 x 9, e ingresar manualmente los numeros que le aparece en pantalla.
-Los 0 representan espacios vacios y los numeros del 1 al 9 son validos para la matriz.
-Finalmente, cuando ingresas las 9 filas, debes pulsar el sudoku en la pagina web para que este, se autocomplete con el bot hecho con el codigo.
++ TP
+<br>
+Para jugar con nuestro bot, debe ingresar a un sudoku de 9 x 9 en internet, y ejecutar el codigo.
+Al ejecutar, le pedirá que ingrese las filas. Ingresa las filas con los números que le aparece el sudoku y los que están vacíos, le coloca un 0.
+Una vez colocado todos y llegando a la última fila; luego de presionar el enter, tiene que asegurarse que le ha dado click al tablero de sudoku donde inicia la posición inicial.
++ ¿Por qué?
+  Simplemente porque el bot funciona con una biblioteca, el cual permite dar clic en un lado de la pantalla y eso se ejecuta de acuerdo al algoritmo creado.
