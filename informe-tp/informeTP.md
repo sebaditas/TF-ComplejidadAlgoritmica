@@ -177,10 +177,13 @@ En este caso, como haremos un bot para sudoku no haremos visualización del conj
    + Estadísticas
    + Gráfico de una porción representativa del espacio de búsqueda
 
-### 2.1. Espacio de bússqueda
+### 2.1. Espacio de búsqueda
 
 El espacio de búsqueda en un Sudoku 9x9 se refiere a la colección de posibles configuraciones y soluciones que se pueden alcanzar al intentar resolver el rompecabezas. En un Sudoku 9x9, tienes una cuadrícula de 9 filas y 9 columnas, que se divide en nueve subgrillas más pequeñas de 3x3.
+
 Para describir el espacio de búsqueda en un Sudoku 9x9, consideremos que cada celda puede contener un número del 1 al 9, representando un posible candidato para esa posición. Por lo tanto, en la primera celda, por ejemplo, tienes 9 posibles opciones (números del 1 al 9), en la segunda también 9 opciones, y así sucesivamente. Para la segunda celda, debes tener en cuenta la restricción de que no se puede repetir ningún número en la misma fila, columna o subgrilla.
+
+A medida que vayas resolviendo el Sudoku, algunas celdas pueden tener menos opciones a medida que se llenan otras celdas y se aplican las reglas del juego. Esto reduce el espacio de búsqueda, ya que se eliminan algunas opciones para cada celda.
 
 + Datos guardados:
 
