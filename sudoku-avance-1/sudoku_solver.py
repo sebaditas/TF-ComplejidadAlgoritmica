@@ -1,6 +1,5 @@
 import pyautogui as pg
 import time
-import string
 
 class SudokuSolver:
 
