@@ -68,7 +68,11 @@
   1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
   2. [Descripción y visualización del conjunto de datos](#2-descripción-y-visualización-del-conjunto-de-datos)<br>
   2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
-  2.2. [Representación mediante grafos](#22-representación-mediante-grafos)<br>
+  2.2. [Estado inicial](#22-estado-inicial)<br>
+  2.3. [Estado final](#23-estado-final)<br>
+  2.4. [Transiciones](#24-transiciones)<br>
+  2.5. [Representación](#25-representación)<br>
+  2.6. [Representación mediante grafos](#22-representación-mediante-grafos)<br>
   3. [Propuesta](#3-propuesta)<br>
   4. [Diseño de la aplicación](#4-diseño-de-la-aplicación)<br>
      4.1. [Análisis de requerimientos](#41-análisis-de-requerimientos)<br>
@@ -167,8 +171,8 @@ En este caso, como haremos un bot para sudoku no haremos visualización del conj
 
 + Espacio de búsqueda
 + Estado inicial
-+ Transiciones
 + Estado Final
++ Transiciones
 + Representación
     + Atributos
     + Tipos de datos
@@ -185,25 +189,52 @@ Para describir el espacio de búsqueda en un Sudoku 9x9, consideremos que cada c
 
 A medida que vayas resolviendo el Sudoku, algunas celdas pueden tener menos opciones a medida que se llenan otras celdas y se aplican las reglas del juego. Esto reduce el espacio de búsqueda, ya que se eliminan algunas opciones para cada celda.
 
-+ Datos guardados:
+### 2.2. Estado Inicial
+
+El estado inicial de un Sudoku 9x9 es una cuadrícula vacía con algunas celdas prellenadas con números del 1 al 9 de acuerdo con las reglas del juego. Estas celdas prellenadas proporcionan el punto de partida para resolver el rompecabezas.
+
+El objetivo es completar la cuadrícula llenando las celdas vacías de manera que cada fila, cada columna y cada subgrilla de 3x3 contengan todos los números del 1 al 9 sin repeticiones.
+
+### 2.3. Estado Final
+
+El estado final es la configuración completa y correcta del Sudoku, donde todas las celdas están llenas y cumplen las reglas del juego.
+
+En el estado final, todas las celdas están llenas y cumplen con las reglas del Sudoku, proporcionando una solución única para el rompecabezas. Cada fila, cada columna y cada subgrilla de 3x3 contiene todos los números del 1 al 9 sin repeticiones.
+
+### 2.4. Transiciones
+
+En el contexto del Sudoku de 9 x 9, las transiciones se refieren a los movimientos que se hacen para avanzar en la resolución del rompecabezas, es decir, cómo se llenan las celdas vacías siguiendo las reglas del juego. Estas transiciones están gobernadas por las reglas del Sudoku y la lógica que dicta cómo se deben completar las celdas. A continuación describiremos las principales transiciones utilizadas en sudoku:
+
+**Asignación de números iniciales**:
+Al comienzo del juego, algunos números ya están dados y se colocan en ciertas celdas. Estos números iniciales se basan en la configuración inicial del Sudoku y son puntos de partida esenciales.
+
+**Identificación de números únicos**:
+Se buscan filas, columnas o subgrillas en las que solo falta un número para completarlas. Se identifican las celdas donde solo hay una opción posible para ese número y se llena.
+
+**Eliminación de candidatos**:
+A medida que se llenan las celdas, se eliminan esos números como candidatos válidos para las celdas de la misma fila, columna y subgrilla. Esto reduce las opciones en otras celdas y simplifica el proceso de resolución.
+
+**Técnicas de exclusión**:
+Se utilizan técnicas de exclusión para identificar candidatos en celdas basándose en la presencia o ausencia de números en filas, columnas y subgrillas. Si un número solo puede ir en una celda en una fila, columna o subgrilla, se coloca en esa celda.
+
+**Comprobación de restricciones**:
+En todo momento, se verifica que se cumplan las restricciones del Sudoku, es decir, que no haya números repetidos en filas, columnas o subgrillas.
+
+**Bifurcación**:
+Si no se puede avanzar mediante técnicas de lógica y exclusión, a veces es necesario hacer una suposición educada sobre un número en una celda y continuar desde allí. Si esta suposición conduce a una contradicción (un conflicto con las reglas), se retrocede y se prueba otra suposición hasta encontrar una solución.
+
+**Retroceso (backtracking)**:
+Si una suposición lleva a una contradicción o a un Sudoku no válido, se retrocede a la suposición anterior y se prueba una nueva suposición. Esto se repite hasta encontrar una solución válida o descartar la suposición actual.
+
+### 2.5. Representación
+
+La representación es que tipos de estructuras de datos hemos utilizado para la elaboración del bot de sudoku de 9 x 9. A continuación, mostraremos las estructuras de datos que hemos usado y que estamos evaluando para el producto final.
 
 <p align="center";>
-  <img src="espacio1.png" alt="UPC">
+  <img src="entrada.png" alt="divideyvenceras">
 </p>
 
-+ Datos generados en el sudoku:
-
-<p align="center";>
-  <img src="resultado1.png" alt="UPC">
-</p>
-
-+ Función que genera los datos y verifica llamanda a la función verificado()
-
-<p align="center";>
-  <img src="Imagen4.png" alt="UPC">
-</p>
-
-### 2.2. Representación mediante grafos
+### 2.6. Representación mediante grafos
 
 Representar un sudoku mediante un grafo es posible utilizando una estructura de datos que modele las relaciones entre los elementos del sudoku de manera adecuada. Una forma común de hacerlo es utilizando un grafo bipartito, donde hay dos conjuntos de vértices: uno para las celdas del sudoku y otro para los números posibles en cada celda.
 
