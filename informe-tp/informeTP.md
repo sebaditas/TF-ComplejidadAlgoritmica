@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-  <img src="upc.png" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/upc.png" alt="UPC">
 </p>
 
 <br>
@@ -125,7 +125,7 @@ El algoritmo de backtracking es utilizado para encontrar soluciones a problemas 
 </div>
 
 <p align="center">
-  <img src="Imagen2.png" alt="backtracking">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/Imagen2.png" alt="backtracking">
 </p>
 
 #### 1.2.2. Algoritmo de divide y vencerás
@@ -147,7 +147,7 @@ Esta técnica es valiosa porque puede ayudar a reducir la complejidad de tiempo 
 </div>
 
 <p align="center";>
-  <img src="Imagen3.png" alt="divideyvenceras">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/Imagen3.png" alt="divideyvenceras">
 </p>
 
 <br>
@@ -230,9 +230,22 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
 
   El algoritmo de backtracking intenta colocar números en las celdas vacías, verificando si es posible según las reglas del Sudoku. Si se encuentra una contradicción, se retrocede y se prueba con      otro número hasta encontrar una solución válida.
 
-<p align="center";>
-  <img src="Imagen4.png" alt="divideyvenceras">
-</p>
+```python
+	#Funcion resultado
+	 def resultado(self):
+	    for y in range(9):
+		for x in range(9):
+		    if self.NumFilas[y][x] == 0:
+			for n in range(1, 10):
+			    if self.verificacion(x, y, n):
+				self.NumFilas[y][x] = n
+				self.resultado()
+				self.NumFilas[y][x] = 0
+			return
+	    self.imprimirNumFilas()
+	    input("Seguimos?")
+
+```
 
 + Además de la matriz NumFilas, también se utilizan listas temporales y strings para manipular y presentar la información en la interfaz gráfica usando PyAutoGUI.
 
@@ -240,13 +253,82 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
 
   **verificacion**, **verificar_fila**, **verificar_columna** y **verificar_subcuadricula** utilizan la matriz NumFilas, además del divide y vencerás para separar la función en métodos más pequeños,   para verificar si colocar un número en una celda es válido de acuerdo con las reglas del Sudoku.
 
+```python
+	def verificacion(self, x, y, n):
+	  return (
+	      self.verificar_fila(x, y, n) and
+	      self.verificar_columna(x, y, n) and
+	      self.verificar_subcuadricula(x, y, n)
+	  )
+	
+	def verificar_fila(self, x, y, n):
+	  for i in range(9):
+	      if self.NumFilas[i][x] == n and i != y:
+		  return False
+	  return True
+	
+	def verificar_columna(self, x, y, n):
+	  for i in range(9):
+	      if self.NumFilas[y][i] == n and i != x:
+		  return False
+	  return True
+	
+	def verificar_subcuadricula(self, x, y, n):
+	
+	  x0 = (x // 3) * 3
+	  y0 = (y // 3) * 3
+	
+	  for i in range(y0, y0 + 3):
+	      for j in range(x0, x0 + 3):
+		  if self.NumFilas[i][j] == n:
+		      return False
+	  return True
+
+```
+
   **resultado** utiliza la matriz NumFilas para buscar soluciones recursivamente y llenar las celdas vacías del Sudoku.
+
+```python
+	def resultado(self):
+	  for y in range(9):
+	      for x in range(9):
+		  if self.NumFilas[y][x] == 0:
+		      for n in range(1, 10):
+			  if self.verificacion(x, y, n):
+			      self.NumFilas[y][x] = n
+			      self.resultado()
+			      self.NumFilas[y][x] = 0
+		      return
+	  self.imprimirNumFilas()
+	  input("Seguimos?")
+
+```
 
   **imprimirNumFilas** crea estructuras temporales (final, str_fin, borde) para imprimir visualmente el Sudoku en la interfaz gráfica utilizando PyAutoGUI.
 
-<p align="center";>
-  <img src="clase.png" alt="divideyvenceras">
-</p>
+```python
+	def imprimirNumFilas(self):
+	  final = list()
+	  str_fin = list()
+	  borde = list()
+	
+	  for i in range(9): final.append(self.NumFilas[i])
+	
+	  for listas in final:
+	      for num in listas: str_fin.append(str(num))
+	
+	  for num in str_fin:
+	      pg.press(num)
+	      pg.hotkey('right')
+	      borde.append(num)
+	
+	      longitud = len(borde)
+	      if longitud % 9 == 0:
+		  for i in range(9):
+		      pg.hotkey('left')
+		  pg.hotkey('down')
+
+```
 
 ### 2.6. Representación mediante grafos
 
@@ -265,7 +347,7 @@ Para cada celda, conectarla con los números posibles para esa celda.
 También puedes conectar las celdas que están en la misma fila, columna y bloque (subgrids 3x3 en un sudoku clásico) entre sí.
 
 <p align="center";>
-  <img src="grafosudoku.jpg" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/grafosudoku.jpg" alt="UPC">
 </p>
 
 ### 2.7. Cálculos de tamaño
@@ -302,11 +384,11 @@ donde:
 A continuación mostraremos un gráfico mínimo, el cual, representa el espacio de búsqueda mínimo que requiere nuestro sudoku.
 
 <p align="center";>
-  <img src="espacio1.png" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/espacio1.png" alt="UPC">
 </p>
 
 <p align="center";>
-  <img src="espacio2.png" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/espacio2.png" alt="UPC">
 </p>
 
 </div>
