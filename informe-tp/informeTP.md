@@ -188,7 +188,7 @@ A medida que vayas resolviendo el Sudoku, algunas celdas pueden tener menos opci
 + Datos guardados:
 
 <p align="center";>
-  <img src="entrada.png" alt="UPC">
+  <img src="espacio1.png" alt="UPC">
 </p>
 
 + Datos generados en el sudoku:
