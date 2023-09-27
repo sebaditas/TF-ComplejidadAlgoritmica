@@ -289,7 +289,6 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
   **resultado** utiliza la matriz NumFilas para buscar soluciones recursivamente y llenar las celdas vacías del Sudoku.
 
 ```python
-
 	def resultado(self):
 	  for y in range(9):
 	      for x in range(9):
@@ -308,7 +307,6 @@ Representa el tablero del Sudoku, donde cada celda contiene un número del 0 al 
   **imprimirNumFilas** crea estructuras temporales (final, str_fin, borde) para imprimir visualmente el Sudoku en la interfaz gráfica utilizando PyAutoGUI.
 
 ```python
-	
 	def imprimirNumFilas(self):
 	  final = list()
 	  str_fin = list()
