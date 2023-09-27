@@ -66,7 +66,7 @@
   1.2. [Fundamentación del problema](#12-fundamentación-del-problema)<br>
   1.2.1. [Algoritmo de Backtracking](#121-algoritmo-de-backtracking)<br>
   1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
-  2. [Descripción y visualización del conjunto de datos](#2-descripción-y-visualización-del-conjunto-de-datos)<br>
+  2. [Descripción y visualización de espacio de búsqueda](#2-descripción-y-visualización-de-espacio-de-búsqueda)<br>
   2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
   2.2. [Estado inicial](#22-estado-inicial)<br>
   2.3. [Estado final](#23-estado-final)<br>
@@ -159,7 +159,7 @@ Esta técnica es valiosa porque puede ayudar a reducir la complejidad de tiempo 
 <br>
 
 
-## 2. Descripción y visualización del conjunto de datos
+## 2. Descripción y visualización de espacio de búsqueda
 
 En este caso, como haremos un bot para sudoku no haremos visualización del conjunto de datos. En su lugar, describiremos detalladamente lo siguiente:
 
