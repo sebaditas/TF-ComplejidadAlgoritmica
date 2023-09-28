@@ -26,6 +26,7 @@ class SudokuSolver:
         return True
 
     def verificar_subcuadricula(self, x, y, n):
+
         x0 = (x // 3) * 3
         y0 = (y // 3) * 3
 
@@ -34,7 +35,6 @@ class SudokuSolver:
                 if self.NumFilas[i][j] == n:
                     return False
         return True
-
 
     def resultado(self):
         for y in range(9):
@@ -63,7 +63,9 @@ class SudokuSolver:
             pg.press(num)
             pg.hotkey('right')
             borde.append(num)
-            if len(borde) % 9 == 0:
+
+            longitud = len(borde)
+            if longitud % 9 == 0:
                 for i in range(9):
                     pg.hotkey('left')
                 pg.hotkey('down')
