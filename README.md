@@ -77,6 +77,8 @@
   2.8. [Visualización](#28-visualización)<br>
   2.8.1. [Gráfico de una porción representativa del espacio de búsqueda](#281-gráfico-de-una-porción-representativa-del-espacio-de-búsqueda)<br>
   3. [Propuesta](#3-propuesta)<br>
+  4. [Conclusiones](#4-conclusiones)<br>
+  5. [Bibliografía](#5-bibliografía)<br>
 
 </div>
 
@@ -415,6 +417,59 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 
 + Finalmente aseguraremos de probar nuestro programa con varios Sudokus 16x16 para verificar su eficiencia y corrección.
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## 4. Conclusiones
+
+<div style="text-align: justify;">
+
++ Resolver un Sudoku de 16x16 es significativamente más complejo que resolver un Sudoku estándar de 9x9. El aumento en el tamaño del tablero aumenta exponencialmente la cantidad de combinaciones posibles y, por lo tanto, la dificultad del problema.
+  
+  <br>
+
++ El algoritmo de backtracking es esencial para resolver Sudokus, ya que permite explorar diferentes posibilidades en busca de la solución correcta. Sin embargo, para Sudokus 16x16, la cantidad de retrocesos puede ser muy alta debido a la mayor complejidad del problema.
+  
+  <br>
+
++ La estrategia de divide y vencerás es útil para optimizar el proceso de resolución. Se divide el tablero en subgrids más pequeños, resolverlos por separado y luego combinar las soluciones parciales. Esto reduce la cantidad de ramificaciones en el árbol de búsqueda
+  
+  <br>
+
++ La eficiencia del algoritmo es crucial para resolver Sudokus de manera práctica, especialmente en tamaños grandes. Se puede seguir mejorando la velocidad de resolución mediante técnicas de optimización.
+  
+  <br>
+
++ Los Sudokus 16x16 son propensos a errores y fallas debido a la mayor complejidad. Es importante implementar un manejo robusto de errores y un registro de las decisiones tomadas y los retrocesos realizados para depurar y mejorar el algoritmo.
+  
+  <br>
+
++ Para garantizar la calidad de tu algoritmo, debemos seguir realizando pruebas exhaustivas con una variedad de Sudokus de diferentes tamaños y niveles de dificultad. Esto te ayudará a identificar posibles fallos y a optimizar el rendimiento.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## 5. Bibliografía
+
+<div style="text-align: justify;">
+
+Ekström, J., & Pitkäjärvi, K. (2015). "The backtracking algorithm and different representations for solving Sudoku Puzzles."
+
+Sánchez, A. (12 de mayo de 2022). La librería Numpy. Aprende con Alf. https://aprendeconalf.es/docencia/python/manual/numpy/ 
+
+Recursos Python (2 de junio de 2017). PyAutoGUI – Módulo de automatización multiplataforma. Recursos Python. https://recursospython.com/guias-y-manuales/pyautogui/ 
+
+Bartolomé, M. (29 de marzo de 2019). Fecha y hora: la biblioteca time. Mclibre. https://www.mclibre.org/consultar/python/lecciones/python-biblioteca-time.html 
+
+Geeksforgeeks (27 de julio de 2013). Backtracking Algorithms. Geeksforgeeks. https://www.geeksforgeeks.org/backtracking-algorithms/ 
+ 
+Cormen, T., Balkcom, D.(2014). Algoritmos de divide y vencerás. Khan Academy. https://es.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms 
 
 </div>
 
