@@ -62,23 +62,29 @@
 <div style="margin-left: 80px;">
 
   1. [Descripción del problema](#1-descripción-del-problema) <br>
-  1.1. [Descripción](#11-descripción)<br>
-  1.2. [Fundamentación del problema](#12-fundamentación-del-problema)<br>
-  1.2.1. [Algoritmo de Backtracking](#121-algoritmo-de-backtracking)<br>
-  1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
+	1.1. [Descripción](#11-descripción)<br>
+	1.2. [Fundamentación del problema](#12-fundamentación-del-problema)<br>
+		1.2.1. [Algoritmo de Backtracking](#121-algoritmo-de-backtracking)<br>
+		1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
   2. [Descripción y visualización de espacio de búsqueda](#2-descripción-y-visualización-de-espacio-de-búsqueda)<br>
-  2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
-  2.2. [Estado inicial](#22-estado-inicial)<br>
-  2.3. [Estado final](#23-estado-final)<br>
-  2.4. [Transiciones](#24-transiciones)<br>
-  2.5. [Representación](#25-representación)<br>
-  2.6. [Representación mediante grafos](#26-representación-mediante-grafos)<br>
-  2.7. [Cálculos de tamaño](#27-cálculos-de-tamaño)<br>
-  2.8. [Visualización](#28-visualización)<br>
-  2.8.1. [Gráfico de una porción representativa del espacio de búsqueda](#281-gráfico-de-una-porción-representativa-del-espacio-de-búsqueda)<br>
+	2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
+	2.2. [Estado inicial](#22-estado-inicial)<br>
+	2.3. [Estado final](#23-estado-final)<br>
+	2.4. [Transiciones](#24-transiciones)<br>
+	2.5. [Representación](#25-representación)<br>
+	2.6. [Representación mediante grafos](#26-representación-mediante-grafos)<br>
+	2.7. [Cálculos de tamaño](#27-cálculos-de-tamaño)<br>
+	2.8. [Visualización](#28-visualización)<br>
+		2.8.1. [Gráfico de una porción representativa del espacio de búsqueda](#281-gráfico-de-una-porción-representativa-del-espacio-de-búsqueda)<br>
   3. [Propuesta](#3-propuesta)<br>
-  4. [Conclusiones](#4-conclusiones)<br>
-  5. [Bibliografía](#5-bibliografía)<br>
+  4. [Diseño de la aplicación](#4-diseño-de-la-aplicación)<br>
+	4.1. [Análisis de requisitos](#41-análisis-de-requisitos)<br>
+	4.2. [Especificación](#42-especificación)<br>
+	4.3. [Diseño y arquitectura](#43-diseño-y-arquitectura)<br>
+	4.4. [Programación](#44-programación)<br>
+	4.5. [Análisis de complejidad](#45-análisis-de-complejidad)<br>
+  5. [Conclusiones](#5-conclusiones)<br>
+  6. [Bibliografía](#6-bibliografía)<br>
 
 </div>
 
@@ -423,7 +429,128 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 <br>
 <br>
 
-## 4. Conclusiones
+## 4. Diseño de la aplicación
+
+### 4.1. Análisis de requisitos
+
+<div style="text-align: justify;">
+
++ El programa debe tener la capacidad de resolver sudokus
++ Los algoritmos que se utilizarán serán backtracking y divide y vencerás
++ La entrada de datos será manual para cada fila del sudoku
++ La visualización de la resolución será al presionar un clic en la página del sudoku
++ Los límites del algoritmo serán hasta los sudokus de dimensiones mayores a 16x16
++ Se pueden presentar problemas de rendimiento al querer resolver los sudokus 16x16 debido a la mayor cantidad de dígitos que se deben emparejar para cumplir las reglas
+
+</div>
+
+### 4.2. Especificación
+
+<div style="text-align: justify;">
+
+**Estructuras utilizadas**:
+
++ Matriz para representar el tablero del sudoku
+
++ Grafo para representar la matriz
+
+**Algoritmos utilizados**:
+
++ Backtracking para hallar las posible soluciones del sudoku avanzando y retrocediendo
++ Divide y vencerás para separar las funcionalidades del programa
+
+</div>
+
+### 4.3. Diseño y arquitectura
+
+<div style="text-align: justify;">
+
+El main llama a las clases sudoku_solver, el cual posee el algoritmo de la solución del sudoku; de igual forma se incorpora la clase sudoku_printer, el cual imprime los numeros del sudoku al momento de rellenarse.
+
+</div>
+
+### 4.4. Programación
+
+<div style="text-align: justify;">
+
+**Lenguaje de programación**: Se utiliza para desarrollar el algoritmo en Python versión 3.11.3 en adelante.
+
+**Bibliotecas**: Se utilizan las siguientes bibliotecas en Python:
+
+**Time**: Proporciona funciones relacionadas con el tiempo y la medición del tiempo. Permite a los programadores realizar tareas como medir el tiempo que lleva ejecutar una parte específica de un programa, crear retrasos o pausas en la ejecución de un programa y trabajar con marcas de tiempo.
+
+**Pyautogui**:  Es una biblioteca que permite la automatización de tareas en el sistema operativo y la interacción con la interfaz gráfica de usuario (GUI). Es especialmente útil para automatizar tareas repetitivas que implican el control del mouse y el teclado.
+
+**Numpy**: Es una poderosa biblioteca para la computación numérica en Python. Proporciona estructuras de datos eficientes para trabajar con arreglos multidimensionales (matrices y vectores) y una amplia variedad de funciones matemáticas para realizar operaciones en estos arreglos.
+
+**Imagénes del código**: Se presentan las siguiente imágenes
+
++ **Uso del backtracking**
+
+```python
+	def resultado(self):
+	  for y in range(9):
+	      for x in range(9):
+		  if self.NumFilas[y][x] == 0:
+		      for n in range(1, 10):
+			  if self.verificacion(x, y, n):
+			      self.NumFilas[y][x] = n
+			      self.resultado()
+			      self.NumFilas[y][x] = 0
+		      return
+	  self.imprimirNumFilas()
+	  input("Seguimos?")
+
+```
++ **Uso de divide y venceras**
+  
+```python
+	def imprimirNumFilas(self):
+	  final = list()
+	  str_fin = list()
+	  borde = list()
+	
+	  for i in range(9): final.append(self.NumFilas[i])
+	
+	  for listas in final:
+	      for num in listas: str_fin.append(str(num))
+	
+	  for num in str_fin:
+	      pg.press(num)
+	      pg.hotkey('right')
+	      borde.append(num)
+	
+	      longitud = len(borde)
+	      if longitud % 9 == 0:
+		  for i in range(9):
+		      pg.hotkey('left')
+		  pg.hotkey('down')
+
+```
+
+### 4.5. Análisis de complejidad
+
+**Análisis de Complejidad del Algoritmo de Backtracking**:
+La complejidad del algoritmo de backtracking para resolver Sudoku depende de varios factores, incluyendo el tamaño del Sudoku y la disposición de los números iniciales.
+
+**Peor caso**: En el peor caso, el algoritmo probará todas las combinaciones posibles hasta encontrar la solución correcta. La complejidad en el peor caso es exponencial y se estima como O(9^(n^2)), donde n es el tamaño de un lado del tablero Sudoku (por ejemplo, n=9 para un Sudoku de 9x9).
+
+**Caso promedio y mejor caso**: La complejidad en casos promedio y mejores casos puede variar según la disposición inicial de los números. Sin embargo, en la práctica, el algoritmo de backtracking es altamente eficiente para la resolución de Sudokus.
+
+**Análisis de Complejidad del Algoritmo "Divide y Vencerás"**:
+**Peor caso**: La complejidad del algoritmo "divide y vencerás" para resolver Sudoku es O(9^n), donde n es el tamaño del lado del tablero del Sudoku. Este análisis es similar al del algoritmo de backtracking.
+
+**Caso promedio y mejor caso**: El análisis en estos casos es similar al peor caso, ya que en última instancia, el algoritmo debe probar todas las combinaciones posibles.
+
+En general, ambos enfoques, backtracking y "divide y vencerás", son altamente eficaces para resolver Sudokus, pero el enfoque de backtracking es ampliamente preferido y utilizado en la práctica debido a su simplicidad y eficiencia.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## 5. Conclusiones
 
 <div style="text-align: justify;">
 
@@ -455,7 +582,7 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 <br>
 <br>
 
-## 5. Bibliografía
+## 6. Bibliografía
 
 <div style="text-align: justify;">
 
@@ -480,3 +607,4 @@ Cormen, T., Balkcom, D.(2014). Algoritmos de divide y vencerás. Khan Academy. h
 <br>
 <br>
 <br>
+
