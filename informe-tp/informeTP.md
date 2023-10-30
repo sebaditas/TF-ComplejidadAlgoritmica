@@ -425,7 +425,7 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 
 ## 4. Diseño de la aplicación
 
-### 4.1. Análisis de requerimientos
+### 4.1. Análisis de requisitos
 
 <div style="text-align: justify;">
 
