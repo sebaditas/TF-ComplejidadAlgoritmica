@@ -423,7 +423,152 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 <br>
 <br>
 
-## 4. Conclusiones
+## 4. Diseño de la aplicación
+
+### 4.1. Análisis de requerimientos
+
+<div style="text-align: justify;">
+
++ El programa debe tener la capacidad de resolver sudokus
++ Los algoritmos que se utilizarán serán backtracking y divide y vencerás
++ La entrada de datos será manual para cada fila del sudoku
++ La visualización de la resolución será al presionar un clic en la página del sudoku
++ Los límites del algoritmo serán hasta los sudokus de dimensiones mayores a 16x16
++ Se pueden presentar problemas de rendimiento al querer resolver los sudokus 16x16 debido a la mayor cantidad de dígitos que se deben emparejar para cumplir las reglas
+
+</div>
+
+### 4.2. Especificación
+
+<div style="text-align: justify;">
+
+**Estructuras utilizadas**:
+
++ Matriz para representar el tablero del sudoku
+
++ Grafo para representar la matriz
+
+**Algoritmos utilizados**:
+
++ Backtracking para hallar las posible soluciones del sudoku avanzando y retrocediendo
++ Divide y vencerás para separar las funcionalidades del programa
+
+</div>
+
+### 4.3. Diseño y arquitectura
+
+<div style="text-align: justify;">
+
+El main llama a las clases sudoku_solver, el cual posee el algoritmo de la solución del sudoku; de igual forma se incorpora la clase sudoku_printer, el cual imprime los numeros del sudoku al momento de rellenarse.
+
+</div>
+
+### 4.4. Programación
+
+<div style="text-align: justify;">
+
+**Lenguaje de programación**: Se utiliza para desarrollar el algoritmo en Python versión 3.11.3 en adelante.
+
+**Librerías**: Se utilizan las siguientes librerías en Python:
+
+**Time**: Proporciona funciones relacionadas con el tiempo y la medición del tiempo. Permite a los programadores realizar tareas como medir el tiempo que lleva ejecutar una parte específica de un programa, crear retrasos o pausas en la ejecución de un programa y trabajar con marcas de tiempo.
+
+**Pyautogui**:  Es una biblioteca que permite la automatización de tareas en el sistema operativo y la interacción con la interfaz gráfica de usuario (GUI). Es especialmente útil para automatizar tareas repetitivas que implican el control del mouse y el teclado.
+
+**Numpy**: Es una poderosa biblioteca para la computación numérica en Python. Proporciona estructuras de datos eficientes para trabajar con arreglos multidimensionales (matrices y vectores) y una amplia variedad de funciones matemáticas para realizar operaciones en estos arreglos.
+
+**Imagénes del código**: Se presentan las siguiente imágenes
+
++ **Uso del backtracking**
+
+<p align="center";>
+  <img src="Imagen4.png" alt="UPC">
+</p>
+
+<p align="center";>
+  <img src="Imagen5.png" alt="UPC">
+</p>
+
+
+### 4.5. Análisis de complejidad
+
+**Análisis de Complejidad del Algoritmo de Backtracking**:
+La complejidad del algoritmo de backtracking para resolver Sudoku depende de varios factores, incluyendo el tamaño del Sudoku y la disposición de los números iniciales.
+
+**Peor caso**: En el peor caso, el algoritmo probará todas las combinaciones posibles hasta encontrar la solución correcta. La complejidad en el peor caso es exponencial y se estima como O(9^(n^2)), donde n es el tamaño de un lado del tablero Sudoku (por ejemplo, n=9 para un Sudoku de 9x9).
+
+**Caso promedio y mejor caso**: La complejidad en casos promedio y mejores casos puede variar según la disposición inicial de los números. Sin embargo, en la práctica, el algoritmo de backtracking es altamente eficiente para la resolución de Sudokus.
+
+**Análisis de Complejidad del Algoritmo "Divide y Vencerás"**:
+**Peor caso**: La complejidad del algoritmo "divide y vencerás" para resolver Sudoku es O(9^n), donde n es el tamaño del lado del tablero del Sudoku. Este análisis es similar al del algoritmo de backtracking.
+
+**Caso promedio y mejor caso**: El análisis en estos casos es similar al peor caso, ya que en última instancia, el algoritmo debe probar todas las combinaciones posibles.
+
+En general, ambos enfoques, backtracking y "divide y vencerás", son altamente eficaces para resolver Sudokus, pero el enfoque de backtracking es ampliamente preferido y utilizado en la práctica debido a su simplicidad y eficiencia.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## 5. Validación de resultados y pruebas
+
+   + A continuación se presentarán los resultados de la ejecución del programa.
+      
+
+      5.1. Análisis de los resultados:
+
+        + ¿Cómo se ingresan las filas?:
+      
+          Para ingresar las filas se debe ingresar los números de izquierda a derecha, en una página de internet de sudoku 9 x 9.
+      
+        <br>
+      
+        <p align = "center";><img src="sudoku.png" alt="UPC"></img></p>
+      
+        <br>
+
+        - Datos de entrada:
+      
+            Podemos observar en el ejemplo de abajo que se debe ingresar las 9 filas que conforman el sudoku de 9 x 9, el cual se conforma de 1 a 9 y los 0 se representan como espacios en blanco.
+
+        <br>
+
+        <p align = "center";><img src="reporte.png" alt="UPC"></img></p>
+          
+      <br>
+
+        - Datos de salida:
+      
+            Podemos observar que al ingresar las variables, solo basta con hacer clic en la página del sudoku para que se resuelva con el bot hecho.
+            En este ejemplo, puede visualizar el algoritmo de backtracking, el cual se puede observar que se va retrocediendo hasta encontrar la solución correcta y va comparando hasta que el algoritmo simplemente lo haya terminado de solucionar.
+
+          <br>
+
+          <p align = "center";><img src="resultado1.png" alt="UPC"></img></p>
+          
+          <br>
+
+            Luego podemos observar que al finalizar la resolución del sudoku, nos aparece un apartado de "Seguimos", el cual indica si deseas continuar o no.
+
+          <p align = "center";><img src="resultado2.png" alt="UPC"></img></p>
+
+          <br>
+
+            Finalmente, aparace un mensaje de "Excelente" o por defecto un mensaje, el cual indica que el sudoku ha sido resuelto correctamente. Esto puede ser corroborado en cualquier sudoku de 9 x 9 en internet.
+
+          <br>
+
+          <p align = "center";><img src="resultado3.png" alt="UPC"></img></p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## 5. Conclusiones
 
 <div style="text-align: justify;">
 
@@ -455,7 +600,7 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 <br>
 <br>
 
-## 5. Bibliografía
+## 6. Bibliografía
 
 <div style="text-align: justify;">
 
