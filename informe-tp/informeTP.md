@@ -475,7 +475,7 @@ El main llama a las clases sudoku_solver, el cual posee el algoritmo de la soluc
 
 **Lenguaje de programación**: Se utiliza para desarrollar el algoritmo en Python versión 3.11.3 en adelante.
 
-**Librerías**: Se utilizan las siguientes librerías en Python:
+**Bibliotecas**: Se utilizan las siguientes bibliotecas en Python:
 
 **Time**: Proporciona funciones relacionadas con el tiempo y la medición del tiempo. Permite a los programadores realizar tareas como medir el tiempo que lleva ejecutar una parte específica de un programa, crear retrasos o pausas en la ejecución de un programa y trabajar con marcas de tiempo.
 
