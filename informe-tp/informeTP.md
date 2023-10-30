@@ -481,14 +481,46 @@ El main llama a las clases sudoku_solver, el cual posee el algoritmo de la soluc
 
 + **Uso del backtracking**
 
-<p align="center";>
-  <img src="Imagen4.png" alt="UPC">
-</p>
+```python
+	def resultado(self):
+	  for y in range(9):
+	      for x in range(9):
+		  if self.NumFilas[y][x] == 0:
+		      for n in range(1, 10):
+			  if self.verificacion(x, y, n):
+			      self.NumFilas[y][x] = n
+			      self.resultado()
+			      self.NumFilas[y][x] = 0
+		      return
+	  self.imprimirNumFilas()
+	  input("Seguimos?")
 
-<p align="center";>
-  <img src="Imagen5.png" alt="UPC">
-</p>
+```
++ **Uso de divide y venceras**
+  
+```python
+	def imprimirNumFilas(self):
+	  final = list()
+	  str_fin = list()
+	  borde = list()
+	
+	  for i in range(9): final.append(self.NumFilas[i])
+	
+	  for listas in final:
+	      for num in listas: str_fin.append(str(num))
+	
+	  for num in str_fin:
+	      pg.press(num)
+	      pg.hotkey('right')
+	      borde.append(num)
+	
+	      longitud = len(borde)
+	      if longitud % 9 == 0:
+		  for i in range(9):
+		      pg.hotkey('left')
+		  pg.hotkey('down')
 
+```
 
 ### 4.5. Análisis de complejidad
 
