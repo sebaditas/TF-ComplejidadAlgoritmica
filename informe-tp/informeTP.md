@@ -62,23 +62,29 @@
 <div style="margin-left: 80px;">
 
   1. [Descripción del problema](#1-descripción-del-problema) <br>
-  1.1. [Descripción](#11-descripción)<br>
-  1.2. [Fundamentación del problema](#12-fundamentación-del-problema)<br>
-  1.2.1. [Algoritmo de Backtracking](#121-algoritmo-de-backtracking)<br>
-  1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
+	1.1. [Descripción](#11-descripción)<br>
+	1.2. [Fundamentación del problema](#12-fundamentación-del-problema)<br>
+		1.2.1. [Algoritmo de Backtracking](#121-algoritmo-de-backtracking)<br>
+		1.2.2. [Algoritmo de divide y vencerás](#122-algoritmo-de-divide-y-vencerás)<br>
   2. [Descripción y visualización de espacio de búsqueda](#2-descripción-y-visualización-de-espacio-de-búsqueda)<br>
-  2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
-  2.2. [Estado inicial](#22-estado-inicial)<br>
-  2.3. [Estado final](#23-estado-final)<br>
-  2.4. [Transiciones](#24-transiciones)<br>
-  2.5. [Representación](#25-representación)<br>
-  2.6. [Representación mediante grafos](#26-representación-mediante-grafos)<br>
-  2.7. [Cálculos de tamaño](#27-cálculos-de-tamaño)<br>
-  2.8. [Visualización](#28-visualización)<br>
-  2.8.1. [Gráfico de una porción representativa del espacio de búsqueda](#281-gráfico-de-una-porción-representativa-del-espacio-de-búsqueda)<br>
+	2.1. [Espacio de búsqueda](#21-espacio-de-búsqueda)<br>
+	2.2. [Estado inicial](#22-estado-inicial)<br>
+	2.3. [Estado final](#23-estado-final)<br>
+	2.4. [Transiciones](#24-transiciones)<br>
+	2.5. [Representación](#25-representación)<br>
+	2.6. [Representación mediante grafos](#26-representación-mediante-grafos)<br>
+	2.7. [Cálculos de tamaño](#27-cálculos-de-tamaño)<br>
+	2.8. [Visualización](#28-visualización)<br>
+		2.8.1. [Gráfico de una porción representativa del espacio de búsqueda](#281-gráfico-de-una-porción-representativa-del-espacio-de-búsqueda)<br>
   3. [Propuesta](#3-propuesta)<br>
-  4. [Conclusiones](#4-conclusiones)<br>
-  5. [Bibliografía](#5-bibliografía)<br>
+  4. [Diseño de la aplicación](#4-diseño-de-la-aplicación)<br>
+	4.1. [Análisis de requisitos](#41-análisis-de-requisitos)<br>
+	4.2. [Especificación](#42-especificación)<br>
+	4.3. [Diseño y arquitectura](#43-diseño-y-arquitectura)<br>
+	4.4. [Programación](#44-programación)<br>
+	4.5. [Análisis de complejidad](#45-análisis-de-complejidad)<br>
+  5. [Conclusiones](#5-conclusiones)<br>
+  6. [Bibliografía](#6-bibliografía)<br>
 
 </div>
 
@@ -537,62 +543,6 @@ La complejidad del algoritmo de backtracking para resolver Sudoku depende de var
 **Caso promedio y mejor caso**: El análisis en estos casos es similar al peor caso, ya que en última instancia, el algoritmo debe probar todas las combinaciones posibles.
 
 En general, ambos enfoques, backtracking y "divide y vencerás", son altamente eficaces para resolver Sudokus, pero el enfoque de backtracking es ampliamente preferido y utilizado en la práctica debido a su simplicidad y eficiencia.
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-## 5. Validación de resultados y pruebas
-
-   + A continuación se presentarán los resultados de la ejecución del programa.
-      
-
-      5.1. Análisis de los resultados:
-
-        + ¿Cómo se ingresan las filas?:
-      
-          Para ingresar las filas se debe ingresar los números de izquierda a derecha, en una página de internet de sudoku 9 x 9.
-      
-        <br>
-      
-        <p align = "center";><img src="sudoku.png" alt="UPC"></img></p>
-      
-        <br>
-
-        - Datos de entrada:
-      
-            Podemos observar en el ejemplo de abajo que se debe ingresar las 9 filas que conforman el sudoku de 9 x 9, el cual se conforma de 1 a 9 y los 0 se representan como espacios en blanco.
-
-        <br>
-
-        <p align = "center";><img src="reporte.png" alt="UPC"></img></p>
-          
-      <br>
-
-        - Datos de salida:
-      
-            Podemos observar que al ingresar las variables, solo basta con hacer clic en la página del sudoku para que se resuelva con el bot hecho.
-            En este ejemplo, puede visualizar el algoritmo de backtracking, el cual se puede observar que se va retrocediendo hasta encontrar la solución correcta y va comparando hasta que el algoritmo simplemente lo haya terminado de solucionar.
-
-          <br>
-
-          <p align = "center";><img src="resultado1.png" alt="UPC"></img></p>
-          
-          <br>
-
-            Luego podemos observar que al finalizar la resolución del sudoku, nos aparece un apartado de "Seguimos", el cual indica si deseas continuar o no.
-
-          <p align = "center";><img src="resultado2.png" alt="UPC"></img></p>
-
-          <br>
-
-            Finalmente, aparace un mensaje de "Excelente" o por defecto un mensaje, el cual indica que el sudoku ha sido resuelto correctamente. Esto puede ser corroborado en cualquier sudoku de 9 x 9 en internet.
-
-          <br>
-
-          <p align = "center";><img src="resultado3.png" alt="UPC"></img></p>
 
 <br>
 <br>
