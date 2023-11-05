@@ -465,7 +465,11 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 
 <div style="text-align: justify;">
 
-El main llama a las clases sudoku_solver, el cual posee el algoritmo de la solución del sudoku; de igual forma se incorpora la clase sudoku_printer, el cual imprime los numeros del sudoku al momento de rellenarse.
++ El main llama a las clases sudoku_solver, el cual posee el algoritmo de la solución del sudoku; de igual forma se incorpora la clase sudoku_printer, el cual imprime los numeros del sudoku al momento de rellenarse.
++ El tablero del Sudoku se representa como una matriz bidimensional internamente en Python, donde cada celda puede contener un número del 1 al 9 (para un tablero de 9x9) o del 1 al 16 (para un tablero de 16x16). 
++ Las celdas vacías se representan comúnmente con el número 0 o el valor None.
++ Se implementan funciones para verificar si un número ingresado por el jugador es válido en una celda específica, de acuerdo con las reglas del Sudoku. Esto asegura que el jugador no coloque números incorrectos en el tablero.
++ Se puede implementar un algoritmo de resolución de Sudoku, como el algoritmo de backtracking, que permita a los jugadores resolver automáticamente el Sudoku o genere tableros válidos para el juego.
 
 </div>
 
@@ -505,26 +509,35 @@ El main llama a las clases sudoku_solver, el cual posee el algoritmo de la soluc
 + **Uso de divide y venceras**
   
 ```python
-	def imprimirNumFilas(self):
-	  final = list()
-	  str_fin = list()
-	  borde = list()
+	def verificacion(self, x, y, n):
+	  return (
+	      self.verificar_fila(x, y, n) and
+	      self.verificar_columna(x, y, n) and
+	      self.verificar_subcuadricula(x, y, n)
+	  )
 	
-	  for i in range(9): final.append(self.NumFilas[i])
+	def verificar_fila(self, x, y, n):
+	  for i in range(9):
+	      if self.NumFilas[i][x] == n and i != y:
+		  return False
+	  return True
 	
-	  for listas in final:
-	      for num in listas: str_fin.append(str(num))
+	def verificar_columna(self, x, y, n):
+	  for i in range(9):
+	      if self.NumFilas[y][i] == n and i != x:
+		  return False
+	  return True
 	
-	  for num in str_fin:
-	      pg.press(num)
-	      pg.hotkey('right')
-	      borde.append(num)
+	def verificar_subcuadricula(self, x, y, n):
 	
-	      longitud = len(borde)
-	      if longitud % 9 == 0:
-		  for i in range(9):
-		      pg.hotkey('left')
-		  pg.hotkey('down')
+	  x0 = (x // 3) * 3
+	  y0 = (y // 3) * 3
+	
+	  for i in range(y0, y0 + 3):
+	      for j in range(x0, x0 + 3):
+		  if self.NumFilas[i][j] == n:
+		      return False
+	  return True
 
 ```
 
