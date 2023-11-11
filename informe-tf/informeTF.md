@@ -473,6 +473,11 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 + Hemos realizado el GUI de la aplicación, el cual permite ingresar un sudoku ya creado por una página web y generar la solución de acuerdo a lo que solicita el requisito. Además al presionar en el sudoku generado, el código automáticamente generará un sudoku en la página mediante nuestro bot al presionar clic en la primera casilla.
 
   + Ejemplo de la interfaz creada con tkinter:
+    <p align="center">
+  	<img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/interfaz.png" alt="UPC">
+    </p>
+    <br>
+  + Sudoku siendo resuelto por el bot:
     
 
 </div>
