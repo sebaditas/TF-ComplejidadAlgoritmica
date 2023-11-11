@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/upc.png" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/upc.png" alt="UPC">
 </p>
 
 <br>
@@ -133,7 +133,7 @@ El algoritmo de backtracking es utilizado para encontrar soluciones a problemas 
 </div>
 
 <p align="center">
-  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/Imagen2.png" alt="backtracking">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/Imagen2.png" alt="backtracking">
 </p>
 
 #### 1.2.2. Algoritmo de divide y vencerás
@@ -155,7 +155,7 @@ Esta técnica es valiosa porque puede ayudar a reducir la complejidad de tiempo 
 </div>
 
 <p align="center";>
-  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/Imagen3.png" alt="divideyvenceras">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/Imagen3.png" alt="divideyvenceras">
 </p>
 
 <br>
@@ -355,7 +355,7 @@ Para cada celda, conectarla con los números posibles para esa celda.
 También puedes conectar las celdas que están en la misma fila, columna y bloque (subgrids 3x3 en un sudoku clásico) entre sí.
 
 <p align="center";>
-  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/grafosudoku.jpg" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/grafosudoku.jpg" alt="UPC">
 </p>
 
 ### 2.7. Cálculos de tamaño
@@ -392,11 +392,11 @@ donde:
 A continuación mostraremos un gráfico mínimo, el cual, representa el espacio de búsqueda mínimo que requiere nuestro sudoku.
 
 <p align="center";>
-  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/espacio1.png" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/espacio1.png" alt="UPC">
 </p>
 
 <p align="center";>
-  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/espacio2.png" alt="UPC">
+  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/espacio2.png" alt="UPC">
 </p>
 
 </div>
