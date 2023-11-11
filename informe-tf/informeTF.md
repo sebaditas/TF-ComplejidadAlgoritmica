@@ -478,7 +478,9 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
     </p>
     <br>
   + Sudoku siendo resuelto por el bot:
-    
+    <p align="center">
+  	<img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/sudoku.png" alt="UPC">
+    </p>
 
 </div>
 
