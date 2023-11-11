@@ -470,6 +470,10 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 + Las celdas vacías se representan comúnmente con el número 0 o el valor None.
 + Se implementan funciones para verificar si un número ingresado por el jugador es válido en una celda específica, de acuerdo con las reglas del Sudoku. Esto asegura que el jugador no coloque números incorrectos en el tablero.
 + Se puede implementar un algoritmo de resolución de Sudoku, como el algoritmo de backtracking, que permita a los jugadores resolver automáticamente el Sudoku o genere tableros válidos para el juego.
++ Hemos realizado el GUI de la aplicación, el cual permite ingresar un sudoku ya creado por una página web y generar la solución de acuerdo a lo que solicita el requisito. Además al presionar en el sudoku generado, el código automáticamente generará un sudoku en la página mediante nuestro bot al presionar clic en la primera casilla.
+
+  + Ejemplo de la interfaz creada con tkinter:
+    
 
 </div>
 
@@ -538,6 +542,73 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 		  if self.NumFilas[i][j] == n:
 		      return False
 	  return True
+
+```
+
++ **Uso de la interfaz gráfica**
+  
+```python
+	import tkinter as tk
+from tkinter import ttk
+from sudoku_solver import SudokuSolver
+from sudoku_printer import SudokuPrinter
+import time
+
+class SudokuGUI:
+
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Sudoku Solver")
+        self.sudoku_solver = SudokuSolver()
+        self.sudoku_printer = SudokuPrinter()
+        self.root.geometry("540x500+300+100")
+
+        self.button_font = ('Arial', 14)
+        self.title_font = ('Arial', 24, 'bold')
+        self.create_widgets()
+
+    def create_widgets(self):
+        self.root.configure(bg='black')
+
+        space_frame = tk.Frame(self.root, height=10, bg='black')
+        space_frame.pack()
+
+        self.style = ttk.Style()
+
+        self.style.configure('TEntry', background='white', foreground='black', font=('Arial', 14))
+
+        self.sudoku_frame = tk.Frame(self.root, bg='black')
+        self.sudoku_frame.pack()
+
+        for i in range(9):
+            for j in range(9):
+                entry = tk.Entry(self.sudoku_frame, width=3, bg='white', fg='black', font=('Arial', 14), bd=2)
+                entry.grid(row=i, column=j, ipadx=10, ipady=10)
+        
+        solve_button = tk.Button(self.root, text="Resolver Sudoku", command=self.solve_sudoku, bg='darkgreen', fg='white', font=self.button_font)
+        solve_button.pack(pady=10)
+
+    def get_sudoku_input(self):
+        num_filas = []
+        for i in range(9):
+            row_values = []
+            for j in range(9):
+                entry = self.sudoku_frame.grid_slaves(row=i, column=j)[0]
+                value = entry.get()
+                if value.isdigit():
+                    row_values.append(int(value))
+                else:
+                    row_values.append(0)
+            num_filas.append(row_values)
+        return num_filas
+
+    def solve_sudoku(self):
+        numero_filas = self.get_sudoku_input()
+        self.sudoku_solver.NumFilas = numero_filas
+
+        time.sleep(1)
+        self.sudoku_solver.resultado()
+
 
 ```
 
