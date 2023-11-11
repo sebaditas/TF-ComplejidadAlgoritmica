@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/upc.png" alt="UPC">
+  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/upc.png" alt="UPC">
 </p>
 
 <br>
@@ -133,7 +133,7 @@ El algoritmo de backtracking es utilizado para encontrar soluciones a problemas 
 </div>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/Imagen2.png" alt="backtracking">
+  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/Imagen2.png" alt="backtracking">
 </p>
 
 #### 1.2.2. Algoritmo de divide y vencerás
@@ -155,7 +155,7 @@ Esta técnica es valiosa porque puede ayudar a reducir la complejidad de tiempo 
 </div>
 
 <p align="center";>
-  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/Imagen3.png" alt="divideyvenceras">
+  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/Imagen3.png" alt="divideyvenceras">
 </p>
 
 <br>
@@ -355,7 +355,7 @@ Para cada celda, conectarla con los números posibles para esa celda.
 También puedes conectar las celdas que están en la misma fila, columna y bloque (subgrids 3x3 en un sudoku clásico) entre sí.
 
 <p align="center";>
-  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/grafosudoku.jpg" alt="UPC">
+  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/grafosudoku.jpg" alt="UPC">
 </p>
 
 ### 2.7. Cálculos de tamaño
@@ -392,11 +392,11 @@ donde:
 A continuación mostraremos un gráfico mínimo, el cual, representa el espacio de búsqueda mínimo que requiere nuestro sudoku.
 
 <p align="center";>
-  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/espacio1.png" alt="UPC">
+  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/espacio1.png" alt="UPC">
 </p>
 
 <p align="center";>
-  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tp/espacio2.png" alt="UPC">
+  <img src="httfs://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/espacio2.png" alt="UPC">
 </p>
 
 </div>
@@ -601,15 +601,15 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 
 Ekström, J., & Pitkäjärvi, K. (2015). "The backtracking algorithm and different representations for solving Sudoku Puzzles."
 
-Sánchez, A. (12 de mayo de 2022). La librería Numpy. Aprende con Alf. https://aprendeconalf.es/docencia/python/manual/numpy/ 
+Sánchez, A. (12 de mayo de 2022). La librería Numpy. Aprende con Alf. httfs://aprendeconalf.es/docencia/python/manual/numpy/ 
 
-Recursos Python (2 de junio de 2017). PyAutoGUI – Módulo de automatización multiplataforma. Recursos Python. https://recursospython.com/guias-y-manuales/pyautogui/ 
+Recursos Python (2 de junio de 2017). PyAutoGUI – Módulo de automatización multiplataforma. Recursos Python. httfs://recursospython.com/guias-y-manuales/pyautogui/ 
 
-Bartolomé, M. (29 de marzo de 2019). Fecha y hora: la biblioteca time. Mclibre. https://www.mclibre.org/consultar/python/lecciones/python-biblioteca-time.html 
+Bartolomé, M. (29 de marzo de 2019). Fecha y hora: la biblioteca time. Mclibre. httfs://www.mclibre.org/consultar/python/lecciones/python-biblioteca-time.html 
 
-Geeksforgeeks (27 de julio de 2013). Backtracking Algorithms. Geeksforgeeks. https://www.geeksforgeeks.org/backtracking-algorithms/ 
+Geeksforgeeks (27 de julio de 2013). Backtracking Algorithms. Geeksforgeeks. httfs://www.geeksforgeeks.org/backtracking-algorithms/ 
  
-Cormen, T., Balkcom, D.(2014). Algoritmos de divide y vencerás. Khan Academy. https://es.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms 
+Cormen, T., Balkcom, D.(2014). Algoritmos de divide y vencerás. Khan Academy. httfs://es.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms 
 
 </div>
 
