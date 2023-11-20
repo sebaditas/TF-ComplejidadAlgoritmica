@@ -83,8 +83,10 @@
 	4.3. [Diseño y arquitectura](#43-diseño-y-arquitectura)<br>
 	4.4. [Programación](#44-programación)<br>
 	4.5. [Análisis de complejidad](#45-análisis-de-complejidad)<br>
-  5. [Conclusiones](#5-conclusiones)<br>
-  6. [Bibliografía](#6-bibliografía)<br>
+  5. [Validación de resultados y pruebas](#5-validación-de-resultados-y-pruebas)<br>
+  	5.1. [Análisis de los resultados](#51-análisis-de-los-resultados)<br>
+  6. [Conclusiones](#6-conclusiones)<br>
+  7. [Bibliografía](#7-bibliografía)<br>
 
 </div>
 
@@ -641,7 +643,55 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 <br>
 <br>
 
-## 5. Conclusiones
+## 5. Validación de resultados y pruebas
+
+   + A continuación se presentarán los resultados de la ejecución del programa.
+      
+
+      ### 5.1. Análisis de los resultados
+
+        + ¿Cómo se ingresan las filas?:
+      
+          Para ingresar las filas se debe ingresar los números de izquierda a derecha, en una página web de sudoku 9 x 9.
+      
+        <br>
+      
+<p align="center";>
+	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/entrada.png" alt="UPC">
+	</p> 	
+</br>
+	<br>
+        - Datos de entrada:
+            Podemos observar en el ejemplo de abajo que se debe ingresar las 9 filas que conforman el sudoku de 9 x 9, el cual se conforma de 1 a 9 y los 0 se representan como espacios en blanco.
+        <br>
+	<br>
+        <p align="center";>
+	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/interfaz.png" alt="UPC">
+	</p> 	
+      <br>
+        - Datos de salida:
+            Podemos observar que al ingresar las variables, solo basta con hacer clic en la página del sudoku para que se resuelva con el bot hecho.
+            En este ejemplo, puede visualizar el algoritmo de backtracking, el cual se puede observar que se va retrocediendo hasta encontrar la solución correcta y va comparando hasta que el algoritmo simplemente lo haya terminado de solucionar.
+          <br>
+	  <br>
+          <p align="center";>
+	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/sudoku.png" alt="UPC">
+	</p> 	
+          <br>
+            Finalmente, aparace un mensaje de "Excelente" o por defecto un mensaje, el cual indica que el sudoku ha sido resuelto correctamente. Esto puede ser corroborado en cualquier sudoku de 9 x 9 en internet.
+          <br>
+	  <br>
+          <p align="center";>
+	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/resultado3.png" alt="UPC">
+	</p> 	
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## 6. Conclusiones
 
 <div style="text-align: justify;">
 
@@ -673,7 +723,7 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 <br>
 <br>
 
-## 6. Bibliografía
+## 7. Bibliografía
 
 <div style="text-align: justify;">
 
