@@ -659,10 +659,12 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 <p align="center";>
 	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/entrada.png" alt="UPC">
 	</p> 	
-        <br>
+</br>
+	<br>
         - Datos de entrada:
             Podemos observar en el ejemplo de abajo que se debe ingresar las 9 filas que conforman el sudoku de 9 x 9, el cual se conforma de 1 a 9 y los 0 se representan como espacios en blanco.
         <br>
+	<br>
         <p align="center";>
 	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/interfaz.png" alt="UPC">
 	</p> 	
@@ -671,16 +673,17 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
             Podemos observar que al ingresar las variables, solo basta con hacer clic en la página del sudoku para que se resuelva con el bot hecho.
             En este ejemplo, puede visualizar el algoritmo de backtracking, el cual se puede observar que se va retrocediendo hasta encontrar la solución correcta y va comparando hasta que el algoritmo simplemente lo haya terminado de solucionar.
           <br>
+	  <br>
           <p align="center";>
 	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/sudoku.png" alt="UPC">
 	</p> 	
           <br>
-            Luego podemos observar que al finalizar la resolución del sudoku, nos aparece un apartado de "Seguimos", el cual indica si deseas continuar o no.
-          <p align = "center";><img src="resultado2.png" alt="UPC"></img></p>
-          <br>
             Finalmente, aparace un mensaje de "Excelente" o por defecto un mensaje, el cual indica que el sudoku ha sido resuelto correctamente. Esto puede ser corroborado en cualquier sudoku de 9 x 9 en internet.
           <br>
-          <p align = "center";><img src="resultado3.png" alt="UPC"></img></p>
+	  <br>
+          <p align="center";>
+	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/resultado3.png" alt="UPC">
+	</p> 	
 
 <br>
 <br>
