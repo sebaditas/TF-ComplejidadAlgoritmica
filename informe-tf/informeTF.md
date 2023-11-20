@@ -661,7 +661,9 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
         - Datos de entrada:
             Podemos observar en el ejemplo de abajo que se debe ingresar las 9 filas que conforman el sudoku de 9 x 9, el cual se conforma de 1 a 9 y los 0 se representan como espacios en blanco.
         <br>
-        <p align = "center";><img src="reporte.png" alt="UPC"></img></p>
+        <p align="center";>
+	  <img src="https://raw.githubusercontent.com/sebaditas/TF-ComplejidadAlgoritmica/main/informe-tf/interfaz.png" alt="UPC">
+	</p> 	
       <br>
         - Datos de salida:
             Podemos observar que al ingresar las variables, solo basta con hacer clic en la página del sudoku para que se resuelva con el bot hecho.
@@ -682,7 +684,7 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 <br>
 <br>
 
-## 5. Conclusiones
+## 6. Conclusiones
 
 <div style="text-align: justify;">
 
@@ -714,7 +716,7 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 <br>
 <br>
 
-## 6. Bibliografía
+## 7. Bibliografía
 
 <div style="text-align: justify;">
 
