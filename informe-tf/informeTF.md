@@ -500,6 +500,8 @@ A continuación mostraremos un gráfico mínimo, el cual, representa el espacio 
 
 **Numpy**: Es una poderosa biblioteca para la computación numérica en Python. Proporciona estructuras de datos eficientes para trabajar con arreglos multidimensionales (matrices y vectores) y una amplia variedad de funciones matemáticas para realizar operaciones en estos arreglos.
 
+**Tkinter**: Es una biblioteca estándar de Python para crear interfaces gráficas de usuario (GUI). Proporciona un conjunto de herramientas y widgets que permiten construir ventanas, cuadros de diálogo, botones, cajas de texto, y otros elementos de interfaz gráfica de usuario.
+
 **Imagénes del código**: Se presentan las siguiente imágenes
 
 + **Uso del backtracking**
