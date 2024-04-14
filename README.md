@@ -729,15 +729,15 @@ En general, ambos enfoques, backtracking y "divide y vencerás", son altamente e
 
 Ekström, J., & Pitkäjärvi, K. (2015). "The backtracking algorithm and different representations for solving Sudoku Puzzles."
 
-Sánchez, A. (12 de mayo de 2022). La librería Numpy. Aprende con Alf. httfs://aprendeconalf.es/docencia/python/manual/numpy/ 
+Sánchez, A. (12 de mayo de 2022). La librería Numpy. Aprende con Alf. https://aprendeconalf.es/docencia/python/manual/numpy/ 
 
-Recursos Python (2 de junio de 2017). PyAutoGUI – Módulo de automatización multiplataforma. Recursos Python. httfs://recursospython.com/guias-y-manuales/pyautogui/ 
+Recursos Python (2 de junio de 2017). PyAutoGUI – Módulo de automatización multiplataforma. Recursos Python. https://recursospython.com/guias-y-manuales/pyautogui/ 
 
-Bartolomé, M. (29 de marzo de 2019). Fecha y hora: la biblioteca time. Mclibre. httfs://www.mclibre.org/consultar/python/lecciones/python-biblioteca-time.html 
+Bartolomé, M. (29 de marzo de 2019). Fecha y hora: la biblioteca time. Mclibre. https://www.mclibre.org/consultar/python/lecciones/python-biblioteca-time.html 
 
-Geeksforgeeks (27 de julio de 2013). Backtracking Algorithms. Geeksforgeeks. httfs://www.geeksforgeeks.org/backtracking-algorithms/ 
+Geeksforgeeks (27 de julio de 2013). Backtracking Algorithms. Geeksforgeeks. https://www.geeksforgeeks.org/backtracking-algorithms/ 
  
-Cormen, T., Balkcom, D.(2014). Algoritmos de divide y vencerás. Khan Academy. httfs://es.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms 
+Cormen, T., Balkcom, D.(2014). Algoritmos de divide y vencerás. Khan Academy. https://es.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms 
 
 </div>
 
